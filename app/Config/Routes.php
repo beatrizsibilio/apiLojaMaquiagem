@@ -38,6 +38,10 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('produtos', 'ProdutoController::listarTodos');
 $routes->get('produto/(:num)', 'ProdutoController::produtoPesquisa/$1');
+$routes->post('gravar', 'ProdutoController::gravarProduto/$1');
+$routes->delete('delete/(:num)', 'ProdutoController::deletarProduto/$1');
+$routes->put('atualizar/(:num)', 'ProdutoController::atualizarProduto/$1');
+$routes->patch('atualizar/(:num)', 'ProdutoController::atualizarProduto/$1');
 
 /*
  * --------------------------------------------------------------------
